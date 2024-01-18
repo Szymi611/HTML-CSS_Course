@@ -1,0 +1,122 @@
+/* FONTS*/
+p{
+    font-family: "luciad console" , 'Courier New';
+    font-size: 16px; /* mozna stosowac em i 1 em to 100% 1.5 to 150% */
+    font-weight: bold;
+    font-style: normal; /*italic*/ 
+}
+
+    /* borders*/
+h1{
+    /*border-style: solid;
+    border-width: 3px;
+    border-color: rgb(180, 18, 156); */
+    /* te trzy wyżej równają sie jednej poniżej */
+    border: 3px solid rgb(189, 18, 172);
+    border-radius: 15px;
+
+}
+p{
+    /* borders*/
+    border-bottom: 3px solid red;
+    border-top: 3px solid yellow;
+    border-left: 3px dotted green;
+    border-right: 3px dashed blue;
+    border-radius: 10px;
+}
+
+/* Shadows */
+h1{
+    text-shadow: 3px 3px 5px red , -3px -3px 5px rgb(64, 0, 255); /* first horizontal offset second vertical offset third blur minus make it to the left*/
+}
+#box1{ /* id of a div*/
+    width: 100px;
+    height: 100px;
+    background-color: rgb(190, 185, 185);
+    box-shadow: 3px 3px 5px;
+    /* Margins - space around an element */
+    margin: auto; /* Customise it as you wish */
+}
+/*float - allows other elements to flow around it*/
+body{
+    border: 3px solid;
+    display: flow-root
+}
+
+#img1{
+    float: left; /*Modifies the float of an img*/
+    margin-right: 10px;
+}
+
+/* overflow - property that sets the desired behavior
+when content does not fit in the parent element box*/
+div{
+    border: 2px solid;
+    height: 75px;
+    overflow: auto; /* scroll-creates scroll bar, hidden-is hiding content that is overflowing*/
+}
+
+/*Display - property specifies if/how an element is displayed
+
+    block-level - start on a new line, take up the full width available
+        (h1, div, p, form, header, footer)
+
+    inline - do not start on a new line, width is limited to what is needed
+        (span, a, img)
+*/
+div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+span{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+/* height and width*/
+.box{
+    border: 2px solid;
+    padding: 25px;
+    box-sizing: border-box;
+    height: auto;
+    width: 50%;
+    float: left;
+    text-align: center;
+
+}
+
+/*Positions
+    realtive - positioned reltive to where it normally is
+    fixed - positioned relative to the viewport
+    absolute - positioned relative to nearest ancestor
+    sticky - positioned based on scroll position
+    static - default position for an element
+*/
+#box1{
+    position: relative; /*fixed,absolute,sticky,static */
+}
+/*Background image*/
+body{
+    background-image: url(images/włochy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;/*To cover the whole page when its to small/big */
+}
+
+/*Combinators
+    Combinators - explains the relationship between listed selectors
+        -descendant
+        > -child
+        ~ -general sibling
+        + -adjacent sibling
+*/
+#container{
+    border: 2px solid;
+}
+#container + p{
+    background-color: yellow;
+}

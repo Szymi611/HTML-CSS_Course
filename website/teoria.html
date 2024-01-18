@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Logo -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+        <title>My first website</title>
+    </head>
+    <body>
+        <h1>Headings ida od 1 do inf</h1>
+
+        <br>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur qui ipsum magnam eaque perferendis maxime. Officiis aut quasi ab laboriosam, quo odit beatae fugit esse, nisi numquam excepturi corporis praesentium!</p>
+        
+        <!--This is a comment-->
+
+        <!-- pre to tekst pre edytowany czyli kazdy enter wciecia zostaja-->
+        <pre>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Omnis repudiandae obcaecati itaque? 
+         
+            Explicabo asperiores distinctio cupiditate officiis doloremque ut natus porro, 
+            minus ipsam est quo recusandae sint laboriosam eum rerum.
+        </pre>
+        
+        <!-- Linki -->
+        <a href="https://www.google.com" target="_blank">
+            click me
+        </a>
+        <!-- Otwiera poczte i pisanie wiadomosci na dany email-->
+        <a href="mailto:test@fake.com">
+            email me
+        </a>
+
+        <!-- Dodanie audio zeby grało -->
+        <audio controls autoplay muted loop>
+            <source src="BlueRibbons.mp3">
+        </audio>
+
+        <!-- Wideo -->
+        <!--<video height="600px" controls autoplay muted>
+            <source src="video/jakiesvideo.mp4" type="video/mp4">
+        </video> -->
+
+        <!--Rodzaje formatowania tekstu-->
+        <p>This is normal text</p>
+        <p>This is <b>bold</b> text</p>
+        <p>This is <i>italic</i> text</p>
+        <p>This is <u>underline</u> text</p>
+        <p>This is <del>deleted</del> text</p>
+        <p>This is <big>big</big> text</p>
+        <p>This is <small>small</small> text</p>
+        <p>This is <sub>subscript</sub> text</p>
+        <p>This is <sup>superscript</sup> text</p>
+        <p>This is <tt>monospaced</tt> text</p>
+        <p>This is <mark>highlighted</mark> text</p>
+
+        <!-- <span> inline container to group elements for styling purposes -->
+        <!-- <div> block ocntainer to group elements for styling purposes -->
+        <h1><span style="background-color:tomato">This is span title</span></h1>
+        <h1><div style="background-color:aqua">This is div title</div></h1>
+            
+        <p><span style="background-color:tomato">This is a span sentence</span></p>
+        <p><div style="background-color:aqua">This is a div sentence</div></p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span style="background-color:tomato">nostrum officia odio molestiae sunt, nisi mollitia dolorem asperiores cumque iure et dolores, deserunt alias quae numquam vitae sint praesentium possimus.</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta magnam accusantium quibusdam sunt omnis explicabo!<div style="background-color:aqua">Neque perspiciatis doloremque, aliquam sit, facilis hic itaque dolor tempora dolorum provident ea expedita!</div></p>
+        
+        <!-- Listy -->
+
+        <!--Unordered list-->
+        <h4>Groceries</h4>
+        <ul>
+            <li>Milk</li>
+            <li>Eggs</li>
+            <li>Bread</li>
+            <li>Coffee supplies</li>
+            <!--Nested list-->
+            <ul>
+                <li>Coffee beans</li>
+                <li>Sugar</li>
+            </ul>
+        </ul>
+
+        <!--Ordered list-->
+        <h4>To do list</h4>
+        <ol>
+            <li>Eat breakfast</li>
+            <li>Attend class</li>
+            <li>Work</li>
+        </ol>
+
+        <!--Description list-->
+        <h4>Mythical Creatures</h4>
+        <dl style="background-color: darkseagreen; border:2px solid">
+            <dt>Dragon</dt>
+            <dd>a mythical monster resembling a giant reptile, sometimes shown as having wings. In European tradition the dragon is typically fire-breathing and tends to symbolize chaos or evil, whereas in East Asia it is usually a beneficent symbol of fertility, associated with water and the heavens.</dd>
+            <dt>Phoenix</dt>
+            <dd>in classical mythology) a unique bird that lived for five or six centuries in the Arabian desert, after this time burning itself on a funeral pyre and rising from the ashes with renewed youth to live through another cycle.</dd>
+            <dt>Vampire</dt>
+            <dd>(in European folklore) a corpse supposed to leave its grave at night to drink the blood of the living by biting their necks with long pointed canine teeth.</dd>
+            <dt>Werewolf</dt>
+            <dd>a person who changes for periods of time into a wolf, typically when there is a full moon.</dd>
+        </dl>
+
+        <!--Tables-->
+        <table border="10" style="background-color: black;">
+            <tr align="center" style="background-color: aqua;">
+                <th width="100">Sunday</th>
+                <th width="100">Monday</th>
+                <th width="100">Tuesday</th>
+                <th width="100">Wednesday</th>
+                <th width="100">Thursday</th>
+                <th width="100">Friday</th>
+                <th width="100">Saturday</th>
+            </tr>
+            <tr align="center" style="background-color: aliceblue;">
+                <td>Closed</td>
+                <td>9-17</td>
+                <td>9-17</td>
+                <td>9-17</td>
+                <td>9-17</td>
+                <td>9-17</td>
+                <td>10-15</td>
+            </tr>
+        </table>
+
+        <!--Button-->
+        <a href="https://www.google.com" target="_blank">
+            <button style="font-size:25px; background-color:grey; color:lightblue; border-radius:5px;">Click me</button>
+            </a>
+            <br>
+            <button onclick="doSomething()" style="font-size:25px; background-color:grey; color:lightblue; border-radius:5px;">Click me</button>
+            
+            <p id="greeting">Hello</p>
+            <!-- JavaScript -->
+            <script>
+                function doSomething(){ 
+                    document.getElementById("greeting").innerHTML = "Goodbye"
+                }
+            </script>
+
+            <!-- Forms -->
+            <!-- for musi zgadzac sie z id
+            type musi odwzorowywac typ danych wprowadzanych -->
+            <form action="index.php" method="POST" enctype="multipart/form-data">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Username" minlength="6" maxlength="15" required>
+            
+                <br><br>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" minlength="6" maxlength="18" required>
+                
+                <br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="email@gmail.com">
+    
+                <br><br>
+    
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required />
+                    
+                <br><br>
+    
+                <label for="bday">Birthday:</label>
+                <input type="date" id="bday">
+    
+                <br><br>
+    
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="0" max="10" value="1">
+    
+                <br><br>
+    
+                <!-- Radio buttons -->
+                <label for="Mr.">Mr.</label>
+                <input type="radio" id="Mr." value="Mr." name="title">
+                <label for="Ms.">Ms.</label>
+                <input type="radio" id="Ms." value="Ms." name="title">
+                <label for="PhD.">PhD.</label>
+                <input type="radio" id="PhD." value="PhD." name="title">
+                <br>
+    
+                <label for="payment">Payment</label>
+                <select id="payment">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="giftcard">Giftcard</option>
+                </select>
+                <br>
+    
+                <label for="subscribe">Subscribe</label>
+                <input type="checkbox" id="subscribe">
+                <br>
+    
+                <label for="comment">comment</label>
+                <textarea id="comment" rows="3" cols="25"></textarea>
+                <br><br>
+    
+                <label for="file">file</label>
+                <input type="file" id="file" accept="image/png, image/jpeg">
+                <br><br>
+    
+                <input type="reset">
+                <input type="submit">
+                    
+            </form>
+
+            <!--Header and footers-->
+            <header style="background-color: mediumorchid;">
+                <h1>Welcome to my page</h1>
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Products</a>
+                <a href="">Contact Us</a>
+            </header>
+
+            <main>
+                <h4>Check out this:</h4>
+                <img src="images/logo.jpeg" alt="profile pic">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed mollitia est repellat debitis beatae quis vitae non reiciendis odio quas. Beatae, nam. Iure deserunt rerum commodi quidem deleniti, soluta amet.</p>
+            </main>
+
+            <footer style="background-color: mediumorchid;">
+                <hr>
+                author: Szymon Domagała<br>
+                &copy; copyright reserved<br>
+                <small><a href="mailto:mail.@mail.com">mail@mail.com</a></small>
+            </footer>
+
+    </body>
+</html>
