@@ -120,3 +120,118 @@ body{
 #container + p{
     background-color: yellow;
 }
+
+/* Pseudoclasses- setting state to a link/button and changing it behavior*/
+a:link{
+    color: lightblue;
+}
+a:hover{
+   color: blue;
+   font-size: 1.1em;
+}
+a:active{
+   color: red;
+   font-size: 1.1em;
+}
+a:visited{
+   color: blueviolet;
+}
+/*Pseudoclasses for a (un)list*/
+li:hover{
+    background-color: lightgoldenrodyellow;
+}
+li:not{
+    background-color: grey;
+}
+/* Pseudo-element - keyword added after a selector that's used to style
+    a specyfic parts of an element ex. first letter, first line */
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+
+/* Pagination */
+.pagination{
+    text-align: center;
+
+}
+.pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: lightgreen;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+/*Dropdown menu*/
+.dropdown{
+    display: inline-block;
+}
+
+.dropdown button{
+    background-color: grey;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: gray;
+}
+.dropdown a:hover{
+    background-color: lightgrey;
+}
+/*Navigation Bar*/
+body{
+    margin: 0px;
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: darkgrey;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(0, 0%, 10%);
+}
+.navbar li{
+    float: left;
+}
