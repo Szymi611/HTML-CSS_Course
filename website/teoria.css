@@ -235,3 +235,11 @@ h1{
 .navbar li{
     float: left;
 }
+
+/*Displaying webpage on smartphones and screens under 600px
+it helps page to look nice*/
+@media screen and(max-width:600px) {
+    aside, section, article{
+        width: 100%;
+    }
+}
