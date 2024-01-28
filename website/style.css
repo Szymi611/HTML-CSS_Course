@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    color: white;
 }
 header{
     font-family: 'Times New Roman', Times, serif;
@@ -15,6 +16,13 @@ header{
     height: 130px;
     width: 100px;
 }
+body{
+    background-image: url(images/background1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;/*To cover the whole page when its to small/big */
+}
 div{
     display: block;
     float: left;
@@ -26,7 +34,7 @@ footer{
 }
 .Mail{
     padding: 10px;
-    text-align: left;
+    text-align: center;
     clear: both;
 }
 .Socials{
