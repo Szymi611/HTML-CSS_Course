@@ -4,7 +4,16 @@
 header{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    text-justify: auto;
     font-size: 20px;
+}
+.profPic{
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 0;
+    height: 130px;
+    width: 100px;
 }
 div{
     display: block;
@@ -12,18 +21,18 @@ div{
     width: 50%;
     padding: 10px;
 }
-.Aboutme{
-    font-size: 16px;
-}
 footer{
     clear: both;
 }
 .Mail{
+    padding: 10px;
     text-align: left;
     clear: both;
 }
 .Socials{
-    text-align: right;
-    font-size: 45px;
-
+    text-align: center;
+    font-size: 45px;    
+}
+.iconLink{
+    margin-right: 40px;
 }
