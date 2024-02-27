@@ -6,7 +6,7 @@ let guess;
 let attempts = 0;
 let isRunning = true;
 
-console.log(answer);
+//console.log(answer);
 while(isRunning){
     
     guess = window.prompt(`Guess a number between ${min} and ${max}`);
