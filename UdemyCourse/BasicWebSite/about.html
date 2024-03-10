@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <!--Main Header-->
+            <header class="main-header">
+                <!--Logo Holder -->
+                <div class="logo-holder">
+                    <a href="#">
+                        <img src="images/logo.png" alt="Cool Buissnes">
+                    </a>
+                </div>
+                <!--Search holder-->
+                <div class="search-holder">
+                    <form action="" method="get">
+                        <input type="search" name="s" placeholder="Search for..">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </header>
+            <!--Main Menu-->
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a>
+                        <ul class="drop">
+                            <li><a href="#">Service One</a></li>
+                            <li><a href="#">Service Two</a></li>
+                            <li><a href="#">Service Three</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!--About Holder-->
+            <section class="about-holder">
+                <article class="about">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia ratione unde alias ipsam, ad explicabo earum quod facilis deserunt at reiciendis quasi temporibus nihil corporis officia. Molestiae voluptatum voluptates obcaecati?</p>
+                    <p>Hic quam sint corporis odio? Aperiam numquam pariatur quasi minima mollitia ut natus sequi veritatis, repellendus illo corporis aspernatur quos, voluptatum, ea labore hic eius cumque quas necessitatibus earum voluptatibus!</p>
+                    <p>Dolorem, ullam porro saepe doloremque asperiores eaque voluptatem in, exercitationem aliquam dolores aperiam. Repellendus quod reiciendis atque tenetur voluptatibus consequatur earum nemo, fuga quos fugiat dolor enim minus, iusto cumque!</p>
+                    <p>Officia neque dolorum veniam modi repudiandae, saepe porro voluptates doloribus commodi? Eos ab amet, odit, dolore explicabo esse adipisci, quos ut tempora expedita facilis sint excepturi voluptate culpa fugit maiores.</p>
+                    <p>Quas eaque incidunt explicabo modi cumque, illo natus ratione numquam, doloremque, nisi labore voluptatibus minus deserunt optio doloribus necessitatibus ducimus quam voluptatum eveniet eius ut laudantium error vero. Fugit, alias.</p>
+                    <p>Optio in deserunt quos! Eligendi obcaecati eaque provident enim eos voluptatum veritatis quam placeat expedita aliquid iure aperiam quae, adipisci perspiciatis dolore veniam recusandae reprehenderit neque ratione excepturi asperiores sit?</p>
+                </article>
+            </section>
+            <!--Footer widgets-->
+            <section class="footer-widget-holder">
+                <div class="footer-widget">
+                    <a href="#">
+                        <img src="images/logo.png" alt="Cool Company">
+                    </a>
+                    <h3>Address</h3>
+                    <address>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </address>
+                </div>
+                <div class="footer-widget">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!--Site Footer-->
+            <footer class="site-footer">
+                <p><small>CopyRight &copy; 2025</small></p>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#adaptive').lightSlider({
+                    adaptiveHeight:true,
+                    item:1,
+                    slideMargin:0,
+                    loop:true
+                });
+            });
+        </script>
+    </body>
+</html>
