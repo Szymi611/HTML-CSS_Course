@@ -16,8 +16,8 @@ const getWeatherData =async(location) => {
         return{};
     }
 
-    const apiKey1 = "f5b73558eb3b80879441e710efb0859c";
-    const apiKey = "012ff81a9b9cd4c9c5f2ed1250abcc18"
+    const apiKey1 = "f5b73558eb3b80879441e710efb0859c2003!@";
+    const apiKey = "012ff81a9b9cd4c9c5f2ed1250abcc182003!@"
     const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${apiKey}`)
     //const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${loaction}%appid=${apiKey}`);
     const data = await response.json();
