@@ -7,6 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
         <meta name="viewport" content="width=device-width, initial-scale=1">  
         <style>
             html, body {
@@ -18,13 +19,13 @@
     <body>
         <!--NAVBAR-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+            <div class="container-fluid" style="margin-left: 100px;">
               <a class="navbar-brand" href="#">416560</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" id="menu-buttons">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Main page</a>
                   </li>
@@ -77,6 +78,51 @@
                                 Nesciunt modi dolor molestias molestiae non voluptas quas incidunt nam, natus quos earum. Alias architecto error quod, repudiandae iure dolorem at inventore voluptatem ratione, in voluptatum minus aliquam exercitationem! Facilis!</p>
                          </div>
                     </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <table class="table table-striped" id="my-table">
+                          <thead>
+                            <tr id="header-row">
+                              <th scope="col">ID</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Surname</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="test-class" id="first-row">
+                              <td>1</td>
+                              <td>Karina</td>
+                              <td>Nowak</td>
+                              <td><button id="btn_delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Oskar</td>
+                              <td>Kowalski</td>
+                              <td><button id="btn_delete">Delete</button></td>
+                            </tr>
+                            <tr class="test-class">
+                              <td>3</td>
+                              <td>Johnnie</td>
+                              <td>Walker</td>
+                              <td><button id="btn_delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Jim</td>
+                              <td>Beam</td>
+                              <td><button id="btn_delete">Delete</button></td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>Jack</td>
+                              <td>Daniels</td>
+                              <td><button id="btn_delete">Delete</button></td>
+                            </tr>
+                          </tbody>
+                        </table>        
+                      </div>
+                    </div>
                 </div>
     
                 <div class = "col-lg-3">
@@ -101,7 +147,59 @@
             <div class="container">
               <span class="text-muted">Sample page footer.</span>
             </div>
-          </footer>               
+        </footer>
+        
+        <script>
+        $().ready(function() {
+
+            $("#menu-buttons li").click(function() {
+            var link_text = $(this).find("a").text();
+            alert(link_text + " clicked");
+            });
+
+            $("#menu-buttons").append('<li class="nav-item"><a href="https://google.com" class="nav-link">Google</a></li>'); 
+
+            $("#menu-buttons").on("click", "li", function() {
+            var link_text = $(this).find("a").text();
+            alert(link_text + " clicked");
+            });
+            
+                        // Dodawanie funkcji handleClick do każdego przycisku
+            /*buttons.forEach(function(button) {
+
+              button.addEventListener('click',() => {
+                const parent = this.parent();
+                parent.fadeOut();
+              });
+
+            });*/
+
+            const buttons = document.querySelectorAll("#btn_delete");
+            $('#my-table').on('click', '#btn_delete', function(){
+              $(this).closest('tr').fadeOut();
+            });
+
+            var json_string = '[{"name":"Shakira Isabel","surname":"Mebarak Ripoll"},{"name":"Jennifer Lynn","surname":"Lopez"}]';
+
+            var json_array = JSON.parse(json_string);
+
+            jQuery.each(json_array, function() {
+                console.log(this.name + " " + this.surname);
+            });
+            
+            $.ajax({
+            url: "https://zaworski.pl/examples/www_lab04_ajax.php",
+            type: "GET",
+            dataType : "text",
+            })
+            .done(function( data ) {
+                console.log("Text received: " + data);
+            })
+            .fail(function( xhr, status, errorThrown ) {
+                alert("Cannot receive data.");
+            });
+
+          });
+        </script>
     </body>
-</html>
-          
+</html> 
