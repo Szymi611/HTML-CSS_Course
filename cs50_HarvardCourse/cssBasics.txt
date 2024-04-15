@@ -1,0 +1,11 @@
+color: the color of text
+text-align: where elements are placed on the page
+background-color: can be set to any color
+width: in pixels or percent of a page
+height: in pixels or percent of a page
+padding: how much space should be left inside an element
+margin: how much space should be left outside an element
+font-family: type of font for text on page
+font-size: in pixels
+border: size type (solid, dashed, etc) color
+
