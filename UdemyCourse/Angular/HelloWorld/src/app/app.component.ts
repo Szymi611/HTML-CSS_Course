@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { link } from 'fs';
 import { MyDateService } from './myService/my-date.service';
+import { UserDataService } from './myService/user-data.service';
+import { HttpClientModule } from '@angular/common/http';
+import { zip } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +14,27 @@ export class AppComponent {
 
   todayDate: any;
 
-  constructor(private myDate : MyDateService){}
+  public personData = [
+    {
+      id: '',
+      name: '',
+      "email": "",
+      "address": {
+        city: '',
+        zipcode: '',
+      }
+    }
+  ]
+
+
+  constructor(private myDate : MyDateService, private userData: UserDataService){}
 
   ngOnInit(){
     this.todayDate = this.myDate.showTodayDate();
+    this.userData.getData().subscribe((data:any) => {
+      this.personData = data;
+      console.log(this.personData)
+    })
   }
 
   title = 'HelloWorld';
