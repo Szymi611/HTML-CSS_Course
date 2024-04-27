@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-new-comp',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './new-comp.component.css'
 })
 export class NewCompComponent {
-  feature_heading = 'Awesome Feature';
-  feature_description ='Some awesome feature to show feature cards'
-  feature_button = 'Learn more'
+
+  @Input() featureSet:any;
+
 }

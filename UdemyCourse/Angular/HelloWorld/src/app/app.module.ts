@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NewCompComponent } from './new-comp/new-comp.component';
 import { FormsModule } from '@angular/forms';
 import { GigabytesToMegabytesPipe } from './pipes/gigabytes-to-megabytes.pipe';
+import { MyDateService } from './myService/my-date.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { GigabytesToMegabytesPipe } from './pipes/gigabytes-to-megabytes.pipe';
     FormsModule
   ],
   providers: [
+    MyDateService,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
