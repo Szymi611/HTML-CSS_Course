@@ -1,3 +1,50 @@
-<h1>Hello World</h1>
+<!-- styling doesnt apply between components p element have different style in app.component.css 
+    and p element form new-comp.component.css has different-->
 
+<header class="main-header py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-3">{{title}}</h1>
+                <hr>
+                <h2 class="fs-5 fw-light">{{description}}</h2>
+                <h2>{{text}}</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="py-5">
+                    <select class="form-select">
+                        <option *ngFor="let month of months">{{ month }}</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <ng-container *ngIf=" isAvailable ; else elseTemplate">
+                    <div class="alert alert-success">
+                        <p class="m-0"><strong>Note: </strong>Yes! It is avaliable</p>
+                    </div>
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <div class="alert alert-danger">
+                        <p class="m-0"><strong>Note: </strong>Not! It is not avaliable</p>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <app-new-comp class="col-md-3"></app-new-comp>
+            <app-new-comp class="col-md-3"></app-new-comp>
+            <app-new-comp class="col-md-3"></app-new-comp>
+            <app-new-comp class="col-md-3"></app-new-comp>
+        </div>
+    </div>
+</section>
 <router-outlet />
+
