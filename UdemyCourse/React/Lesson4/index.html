@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <div id="react-container"></div>
+    
+    <script type="text/babel">
+    
+        class CheckBox extends React.Component{
+
+            constructor(props){
+                super(props);
+                this.state = {
+                    checked: false
+                }
+            }
+
+            onChangeHandle = () => {
+                this.setState({checked: !this.state.checked})
+            }
+
+            render(){
+                let message;
+                if(this.state.checked){
+                    message = 'Checked';
+                }else{
+                    message = 'Unchecked';
+                }
+                return(
+                    <div>
+                        <input type="checkbox" onChange={this.onChangeHandle}/>
+                        <p>The box is {message}</p>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<CheckBox/>, document.getElementById('react-container'));
+        
+    </script>
+
+</body>
+</html>
